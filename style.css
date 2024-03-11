@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #c7cc19;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    grid-column: 1 / span 2;
+  }
+  
+  /* Phần menu điều hướng */
+  nav {
+    background-color: #ffa486;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    grid-column: 1 / span 2;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  /* Phần danh sách sản phẩm */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    grid-column: 1;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Phần sidebar */
+  .sidebar {
+    background-color: #199cff;
+    color: #fff;
+    padding: 10px;
+    grid-column: 2;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    background-color: #4CAF50; /* Màu xanh */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px; /* Bo viền */
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Màu xanh nhạt khi di chuột qua */
+  }
+  /* Chỉnh lại bố cục cho màn hình thiết bị di động */
+  @media (max-width: 576px) {
+    .product-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .product-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .sidebar {
+      grid-column: 1 / span 2;
+    }
+  }
+  
+  /* Chỉnh lại bố cục cho phần footer */
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  .footer-item {
+    padding: 0 20px; /* Khoảng cách giữa các cột */
+    text-align: center; /* Căn giữa nội dung */
+  }
